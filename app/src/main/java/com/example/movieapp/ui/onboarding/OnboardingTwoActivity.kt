@@ -1,4 +1,4 @@
-package com.example.movieapp.onboarding
+package com.example.movieapp.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle

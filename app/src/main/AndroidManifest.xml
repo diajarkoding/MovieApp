@@ -16,28 +16,28 @@
         android:theme="@style/AppTheme.MovieApp.noActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".onboarding.OnboardingOneActivity"
+            android:name=".ui.onboarding.OnboardingOneActivity"
             android:exported="false" />
         <activity
-            android:name=".onboarding.OnboardingTwoActivity"
+            android:name=".ui.onboarding.OnboardingTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".onboarding.OnboardingThreeActivity"
+            android:name=".ui.onboarding.OnboardingThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".ui.auth.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".ui.auth.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpPhotoScreenActivity"
+            android:name=".ui.auth.SignUpPhotoScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".ui.splash.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
