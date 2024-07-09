@@ -36,7 +36,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         // Initialize Firebase Database with the correct URL
-         userRef = FirebaseManager.getDatabaseReference()
+        userRef = FirebaseManager.getDatabaseReference()
         Log.d("SignInActivity", "Firebase Database initialized")
 
         preference = Preferences(this)
