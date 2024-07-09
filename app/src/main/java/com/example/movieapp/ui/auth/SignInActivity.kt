@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class SignInActivity : AppCompatActivity() {
-    private lateinit var mDatabase: DatabaseReference
+    private lateinit var userRef: DatabaseReference
     lateinit var preference: Preferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +36,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         // Initialize Firebase Database with the correct URL
-        mDatabase = FirebaseDatabase.getInstance("https://auth-demo-flutter-917eb-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("User")
+         userRef = FirebaseManager.getDatabaseReference()
         Log.d("SignInActivity", "Firebase Database initialized")
 
         preference = Preferences(this)
@@ -79,7 +79,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun pushLogin(iUsername: String, iPassword: String) {
-        mDatabase.child(iUsername).addListenerForSingleValueEvent(object : ValueEventListener {
+        userRef.child(iUsername).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onCancelled(databaseError: DatabaseError) {
                 Toast.makeText(this@SignInActivity, databaseError.message, Toast.LENGTH_LONG).show()
                 Log.e("SignInActivity", "Database error: ${databaseError.message}")
